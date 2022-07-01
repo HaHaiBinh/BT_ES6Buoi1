@@ -1,6 +1,7 @@
-let colorList = ['pallet', 'viridian', 'pewter', 'cerulean', 'vermil','lion', 'lavender', 'celadon','saffron','fuschia','cinnabar'];
+// let colorList = ['pallet', 'viridian', 'pewter', 'cerulean', 'vermil','lion', 'lavender', 'celadon','saffron','fuschia','cinnabar'];
 
-// let colorList = ['black', 'blue', 'while', 'red', 'yellow'];
+let colorList = ['black', 'blue', 'white', 'red', 'yellow', 'pink', 'green'];
+
 
 
 let renderButton = () => {
@@ -16,7 +17,12 @@ let renderButton = () => {
     document.getElementById("colors").innerHTML = htmlOutput;
 }
 renderButton();
+
+
 window.changeColor = (color) => {
-    document.getElementById("house").style.color = color;
+    document.querySelector(".house-roof").style.background = color;
+    document.querySelector(".house-upper").style.background = color;
+    document.querySelector(".house-base").style.background = color;
+    document.querySelector(".house-window-wrapper").style.background = color;
 }
 
